@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="BasicJAX-RPCApp1"
+  id="myeclipse.1442253453997"
+  context-root="/BasicJAX-RPCApp1"
+  j2ee-spec="5.0"
+  archive="BasicJAX-RPCApp1.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

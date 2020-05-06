@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<definitions name="HelloMsgService" targetNamespace="http://vcs.com/msg/wsdl" xmlns:tns="http://vcs.com/msg/wsdl" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <types/>
+  <message name="Msg_getMsg">
+    <part name="String_1" type="xsd:string"/></message>
+  <message name="Msg_getMsgResponse">
+    <part name="result" type="xsd:string"/></message>
+  <portType name="Msg">
+    <operation name="getMsg" parameterOrder="String_1">
+      <input message="tns:Msg_getMsg"/>
+      <output message="tns:Msg_getMsgResponse"/></operation></portType>
+  <binding name="MsgBinding" type="tns:Msg">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+    <operation name="getMsg">
+      <soap:operation soapAction=""/>
+      <input>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="encoded" namespace="http://vcs.com/msg/wsdl"/></input>
+      <output>
+        <soap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" use="encoded" namespace="http://vcs.com/msg/wsdl"/></output></operation></binding>
+  <service name="HelloMsgService">
+    <port name="MsgPort" binding="tns:MsgBinding">
+      <soap:address location="http://localhost:8081/BasicJAX-RPCApp1/ws/Msg"/></port></service></definitions>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<configuration
+    xmlns="http://java.sun.com/xml/ns/jax-rpc/ri/config">
+       <service name="HelloMsgService" targetNamespace="http://vcs.com/msg/wsdl" typeNamespace="http://vcs.com/msg/types"
+       packageName="com.vcs.service.binding">
+       <interface name="com.vcs.service.Msg" servantName="com.vcs.service.HelloMsg" />
+       </service>
+</configuration>
